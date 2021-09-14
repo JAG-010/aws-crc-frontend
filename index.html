@@ -33,6 +33,7 @@
 
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -57,8 +58,24 @@
 
 	<body onload="visits()">
 	<!-- <p>You are visitor # </p> -->
-
-	
+	<div class="banner">
+		<div class="banner__content">
+			<div class="banner__text">
+				<p id ="Visitor_Count"></p>
+				<script type='text/javascript' src="js/visitor_count.js"></script>
+			</div>
+			<button class="banner__close" type="button">
+				<span class="material-icons">
+					close
+				</span>
+			</button>
+		</div>
+	</div>	
+	<script>
+		document.querySelector(".banner__close").addEventListener("click", function() {
+			this.closest(".banner").style.display = "none";
+		});
+	</script>
 	
 	<div class="fh5co-loader"></div>
 	
@@ -299,8 +316,8 @@
 					<br>
 					<br>
 					<p><a href="./files/JAGAN_SEKARAN_Cloud_2021.pdf" download="JAGAN_SEKARAN_Cloud_2021" class="btn btn-default btn-lg">Download</a></p>
-					<p id ="Visitor_Count"></p>
-					<script type='text/javascript' src="js/visitor_count.js"></script>
+					<!-- <p id ="Visitor_Count"></p>
+					<script type='text/javascript' src="js/visitor_count.js"></script> -->
 				</div>
 			</div>
 		</div>
